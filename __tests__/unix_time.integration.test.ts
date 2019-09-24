@@ -1,4 +1,4 @@
-import {appProvider, createGQLRequest} from './appProvider';
+import {appProvider, createGQLRequest} from './app_provider';
 import request from 'supertest';
 
 const TIME_IN_MS = 1557174755010;
