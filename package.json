@@ -1,0 +1,64 @@
+{
+    "name": "@social-native/snpkg-graphql-scalar-unix-time-sec",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "nodemon -e ts -w ./src -x npm run ts-node-start",
+        "ts-node-start": "node ./node_modules/.bin/ts-node --project tsconfig.json src/index.ts",
+        "clean": "rimraf coverage dist tmp",
+        "build": "npm run clean && rollup -c",
+        "watch": "rollup -cw",
+        "prettier": "./node_modules/.bin/prettier \"src/**/*\" --write",
+        "lint": "tslint -t stylish --project \"tsconfig.json\"",
+        "test": "jest --passWithNoTests",
+        "test:watch": "npm run test -- --watchAll --runInBand",
+        "type-check:watch": "npm run type-check -- --watch",
+        "type-check": "tsc --noEmit",
+        "dep-check": "snpkg-dependency-check",
+        "package-version-validation": "snpkg-package-version-validation package-version-validation",
+        "tag-version-validation": "snpkg-package-version-validation tag-version-validation",
+        "postinstall": "snpkg-generate-config-ci snpkg"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec/issues"
+    },
+    "homepage": "https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec#readme",
+    "dependencies": {
+        "@social-native/snpkg-generate-config-ci": "^0.2.0",
+        "graphql": "^14.5.7"
+    },
+    "devDependencies": {
+        "@social-native/snpkg-dependency-check": "^0.1.0",
+        "@social-native/snpkg-package-version-validation": "^3.2.0",
+        "@types/jest": "^24.0.13",
+        "@types/supertest": "^2.0.8",
+        "apollo-server-koa": "^2.9.4",
+        "jest": "^24.5.0",
+        "nodemon": "^1.18.10",
+        "prettier": "^1.16.4",
+        "rimraf": "^2.6.3",
+        "rollup": "^1.2.2",
+        "rollup-plugin-typescript2": "^0.21.1",
+        "superagent": "^5.1.0",
+        "supertest": "^4.0.2",
+        "ts-jest": "^24.0.0",
+        "ts-node": "^8.0.3",
+        "tsconfig-paths": "^3.8.0",
+        "tslint": "^5.14.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-eslint-rules": "^5.4.0",
+        "tslint-immutable": "^5.5.2",
+        "typescript": "~3.5.1"
+    }
+}

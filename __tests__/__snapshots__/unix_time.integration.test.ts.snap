@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with correct type allows strings to be sent as input type directly inline of query 1`] = `
+"{\\"data\\":{\\"user\\":{\\"createdAt\\":10000101}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with correct type allows strings to be sent as input type via variables 1`] = `
+"{\\"data\\":{\\"user\\":{\\"createdAt\\":1557174755}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with correct type allows using seconds in inline query 1`] = `
+"{\\"data\\":{\\"user\\":{\\"createdAt\\":1557174755,\\"input\\":1557174755}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with correct type allows using seconds in query variable 1`] = `
+"{\\"data\\":{\\"user\\":{\\"createdAt\\":1557174755,\\"input\\":1557174755}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with wrong type throws error if a wrong type is used as an input variable 1`] = `
+"{\\"errors\\":[{\\"message\\":\\"Variable \\\\\\"$input\\\\\\" got invalid value { wat: 1557174755010 }; Expected type UnixTimeSec. UnixTimeSec scalar must be seconds represented as a number or string\\",\\"locations\\":[{\\"line\\":2,\\"column\\":27}],\\"extensions\\":{\\"code\\":\\"INTERNAL_SERVER_ERROR\\",\\"exception\\":{\\"message\\":\\"UnixTimeSec scalar must be seconds represented as a number or string\\"}}}]}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with wrong type throws error if ms is used as an input inline in the query 1`] = `
+"{\\"errors\\":[{\\"message\\":\\"Expected type UnixTimeSec, found 1557174755010; UnixTimeSec scalar has invalid value. Must be seconds since Unix Epoch\\",\\"locations\\":[{\\"line\\":3,\\"column\\":37}],\\"extensions\\":{\\"code\\":\\"GRAPHQL_VALIDATION_FAILED\\"}}]}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent client to server with wrong type throws error if ms is used as an input variable 1`] = `
+"{\\"errors\\":[{\\"message\\":\\"Variable \\\\\\"$input\\\\\\" got invalid value 1557174755010; Expected type UnixTimeSec. UnixTimeSec scalar has invalid value. Must be seconds since Unix Epoch\\",\\"locations\\":[{\\"line\\":2,\\"column\\":27}],\\"extensions\\":{\\"code\\":\\"INTERNAL_SERVER_ERROR\\",\\"exception\\":{\\"message\\":\\"UnixTimeSec scalar has invalid value. Must be seconds since Unix Epoch\\"}}}]}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent server to client correctly allows seconds to be returned 1`] = `
+"{\\"data\\":{\\"user\\":{\\"createdAt\\":1557174755}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent server to client with wrong type throws an error if there are more than 13 digits 1`] = `
+"{\\"errors\\":[{\\"message\\":\\"UnixTimeSec scalar has invalid value\\",\\"locations\\":[{\\"line\\":4,\\"column\\":29}],\\"path\\":[\\"user\\",\\"createdAt\\"],\\"extensions\\":{\\"code\\":\\"INTERNAL_SERVER_ERROR\\",\\"exception\\":{\\"message\\":\\"UnixTimeSec scalar has invalid value\\"}}}],\\"data\\":{\\"user\\":{\\"createdAt\\":null}}}
+"
+`;
+
+exports[`GQL Scalars UnixTimeSec scalar sent server to client with wrong type throws an error if time is in the wrong type 1`] = `
+"{\\"errors\\":[{\\"message\\":\\"UnixTimeSec scalar must be seconds represented as a number or string\\",\\"locations\\":[{\\"line\\":4,\\"column\\":29}],\\"path\\":[\\"user\\",\\"createdAt\\"],\\"extensions\\":{\\"code\\":\\"INTERNAL_SERVER_ERROR\\",\\"exception\\":{\\"message\\":\\"UnixTimeSec scalar must be seconds represented as a number or string\\"}}}],\\"data\\":{\\"user\\":{\\"createdAt\\":null}}}
+"
+`;
