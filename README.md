@@ -28,6 +28,8 @@ const typeDefs = gql`
     type Query {
         user(input: ${unixTimeSec.type.name}): User
     }
+    
+    ${unixTimeSec.typedef}
 `;
 ```
 
@@ -42,6 +44,8 @@ type User {
 type Query {
     user(input: UnixTimeSec): User
 }
+
+scalar UnixTimeSec
 ```
 
 3. Add the resolver
