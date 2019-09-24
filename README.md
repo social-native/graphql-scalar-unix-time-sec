@@ -13,7 +13,7 @@ npm i -D @social-native/snpkg-graphql-scalar-unix-time-sec
 1. Import
 
 ```typescript
-import unixTimeSec from '../src/index';
+import unixTimeSec from '@social-native/snpkg-graphql-scalar-unix-time-sec';
 ```
 
 2. Use the scalar in the gql schema file
