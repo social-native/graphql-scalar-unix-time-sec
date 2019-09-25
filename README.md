@@ -61,7 +61,7 @@ const resolvers = {
 };
 ```
 
-# API
+# Features
 
 This scalar will:
 
