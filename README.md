@@ -5,7 +5,7 @@ A GraphQL scalar for representing unix time seconds
 # Install
 
 ```typescript
-npm i -D @social-native/snpkg-graphql-scalar-unix-time-sec
+npm i --save @social-native/snpkg-graphql-scalar-unix-time-sec
 ```
 
 # Usage
