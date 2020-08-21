@@ -1,7 +1,7 @@
 {
-    "name": "@social-native/snpkg-graphql-scalar-unix-time-sec",
-    "version": "0.1.1",
-    "description": "",
+    "name": "graphql-scalar-unix-time-sec",
+    "version": "0.2.0",
+    "description": "A GraphQL scalar for representing unix time seconds",
     "main": "dist/index.cjs.js",
     "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
@@ -19,28 +19,29 @@
         "test": "jest --passWithNoTests",
         "test:watch": "npm run test -- --watchAll --runInBand",
         "type-check:watch": "npm run type-check -- --watch",
-        "type-check": "tsc --noEmit",
-        "dep-check": "snpkg-dependency-check",
-        "package-version-validation": "snpkg-package-version-validation package-version-validation",
-        "tag-version-validation": "snpkg-package-version-validation tag-version-validation",
-        "postinstall": "snpkg-generate-config-ci snpkg"
+        "type-check": "tsc --noEmit"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec.git"
+        "url": "git+https://github.com/social-native/graphql-scalar-unix-time-sec.git"
     },
-    "license": "ISC",
+    "keywords": [
+        "graphql",
+        "scalar",
+        "unix",
+        "time",
+        "seconds"
+    ],
+    "author": "Ethan Hathaway <erhathaway@gmail.com>",
+    "license": "Apache-2.0",
     "bugs": {
-        "url": "https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec/issues"
+        "url": "https://github.com/social-native/graphql-scalar-unix-time-sec/issues"
     },
-    "homepage": "https://github.com/social-native/snpkg-graphql-scalar-unix-time-sec#readme",
+    "homepage": "https://github.com/social-native/graphql-scalar-unix-time-sec#readme",
     "dependencies": {
-        "@social-native/snpkg-generate-config-ci": "^0.2.0",
         "graphql": "^14.5.7"
     },
     "devDependencies": {
-        "@social-native/snpkg-dependency-check": "^0.1.0",
-        "@social-native/snpkg-package-version-validation": "^3.2.0",
         "@types/jest": "^24.0.13",
         "@types/supertest": "^2.0.8",
         "apollo-server-koa": "^2.9.4",

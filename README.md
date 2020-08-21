@@ -1,11 +1,11 @@
-# snpkg-graphql-scalar-unix-time-sec
+# graphql-scalar-unix-time-sec
 
 A GraphQL scalar for representing unix time seconds
 
 # Install
 
 ```typescript
-npm i --save @social-native/snpkg-graphql-scalar-unix-time-sec
+npm i --save graphql-scalar-unix-time-sec
 ```
 
 # Usage
@@ -13,7 +13,7 @@ npm i --save @social-native/snpkg-graphql-scalar-unix-time-sec
 1. Import
 
 ```typescript
-import unixTimeSec from '@social-native/snpkg-graphql-scalar-unix-time-sec';
+import unixTimeSec from 'graphql-scalar-unix-time-sec';
 ```
 
 2. Use the scalar in the gql schema file
