@@ -42,7 +42,7 @@
         "graphql": "14.7.0"
     },
     "devDependencies": {
-        "@types/jest": "^24.0.13",
+        "@types/jest": "^26.0.19",
         "@types/supertest": "^2.0.8",
         "apollo-server-koa": "^2.9.4",
         "jest": "^24.5.0",
